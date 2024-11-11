@@ -1,0 +1,8 @@
+Step 1: current_sum = -1 max_sum = 1
+Step 2: current_sum = 3 max_sum = 3
+Step 3: current_sum = 7 max_sum = 7
+Step 4: current_sum = 6 max_sum = 7
+Step 5: current_sum = 8 max_sum = 8
+Step 6: current_sum = 9 max_sum = 9
+Step 7: current_sum = 4 max_sum = 9
+Step 8: current_sum = 8 max_sum = 9

@@ -7,10 +7,18 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 
 using namespace std;
 
 int max_sum_subarray(vector<int>& arr, int n) {
+	ofstream outfile("MSS.txt");
+	
+	if (!outfile) {
+		cerr << "Can not open this file" << endl;
+		return -1; // khong the mo file
+	}
+	
 	if (n < 1) 
 		return 0; // mang khong co phan tu nao
 		
@@ -21,7 +29,10 @@ int max_sum_subarray(vector<int>& arr, int n) {
 		current_sum = max(arr[i], current_sum + arr[i]); // tinh tong con lon nhat bang cach them phan tu hien tai
 		
 		max_sum = max(max_sum, current_sum); // cap nhat max_sum
+		
+		outfile << "Step " << i << ": current_sum = " << current_sum << " " << "max_sum = " << max_sum << endl;
 	}
+	outfile.close();
 	return max_sum;
 }
 
